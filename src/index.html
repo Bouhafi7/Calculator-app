@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator app</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title-theme">
+            <h2>calc</h2>
+            <div class="theme">
+                <p>theme</p>
+                <div class="theme-numbers-switcher">
+                    <p>1 2 3</p>
+                    <div class="theme-switcher">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-container" id="res"></div>
+        <div class="btn-container">
+            <button onclick="res.innerText +=7">7</button>
+            <button onclick="res.innerText +=8">8</button>
+            <button onclick="res.innerText +=9">9</button>
+            <button onclick="res.innerText =  res.innerText.substring(0, res.innerText.length -1)" class="del">del</button>
+            <button onclick="res.innerText +=4">4</button>
+            <button onclick="res.innerText +=5">5</button>
+            <button onclick="res.innerText +=6">6</button>
+            <button class="add" onclick="res.innerText +='+'">+</button>
+            <button onclick="res.innerText +=1">1</button>
+            <button onclick="res.innerText +=2">2</button>
+            <button onclick="res.innerText +=3">3</button>
+            <button class="sub" onclick="res.innerText +='-'">-</button>
+            <button class="dot" onclick="res.innerText +='.'">.</button>
+            <button class="zero" onclick="res.innerText +=0">0</button>
+            <button class="pers" onclick="res.innerText +='/'">/</button>
+            <button onclick="res.innerText +='*'">x</button>
+            <button onclick="res.innerText =''" class="reset">reset</button>
+            <button onclick="calc()" class="equal">=</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

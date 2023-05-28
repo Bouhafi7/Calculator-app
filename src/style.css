@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Karla:wght@200;300;400;500;600;700;800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,800;1,900&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: League Spartan;
+}
+
+:root{
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background-keypad-background: hsl(221, 25%, 25%);
+    --screen-background: hsl(224, 36%, 15%);
+    --key-background-two: hsl(225, 21%, 49%);
+    --key-background-two-hover: hsl(225, 24%, 67%);
+    --key-shadow-two: hsl(224, 28%, 35%);
+    --key-background-toggle: hsl(6, 63%, 50%);
+    --key-background-toggle-hover: hsl(6, 49%, 63%);
+    --key-shadow-three: hsl(6, 70%, 34%);
+    --text-primary: white;
+    --text-secondary: hsl(221, 14%, 31%);
+    --keys-color: hsl(221, 14%, 31%);
+    --key-background: hsl(30, 25%, 89%);
+    --keys-hover: white;
+    --special-keys-color: white;
+}
+
+[data-theme='second']{
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background-keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    --key-background-two: hsl(185, 42%, 37%);
+    --key-background-two-hover: hsl(184, 17%, 51%);
+    --key-shadow-two: hsl(185, 39%, 35%);
+    --key-background-toggle: hsl(25, 98%, 40%);
+    --key-background-toggle-hover: hsl(25, 56%, 63%);
+    --key-shadow-three: hsl(25, 99%, 27%);
+    --key-background: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --text-primary: hsl(60, 10%, 19%);
+    --text-secondary: white;
+    --keys-color: hsl(221, 14%, 31%);
+    --special-keys-color: white;
+    --special-keys-color-hover: hsl(184, 17%, 51%);
+}
+
+[data-theme='third']{
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background-keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    --key-background-two: hsl(281, 89%, 26%);
+    --key-background-two-hover: hsl(281, 30%, 45%);
+    --key-shadow-two: hsl(285, 91%, 52%);
+    --key-background-toggle: hsl(176, 100%, 44%);
+    --key-background-toggle-hover: hsl(176, 55%, 69%);
+    --key-shadow-three: hsl(177, 92%, 70%);
+    --key-background: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    --text-primary: hsl(52, 100%, 62%);
+    --text-secondary: white;
+    --keys-color: hsl(52, 100%, 62%);
+    --key-equal: hsl(221, 14%, 31%);
+    --keys-hover: hsl(281, 76%, 37%);
+    --special-keys-color-hover: hsl(285, 50%, 51%);
+}
+
+
+body{
+    background-color: var(--main-background);
+}
+
+.container{
+    width: 500px;
+    margin: 150px auto;
+}
+
+.container .title-theme{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-primary);
+}
+
+.container .title-theme .theme{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.container .title-theme .theme > p{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.container .title-theme .theme .theme-numbers-switcher{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container .title-theme .theme .theme-numbers-switcher > p{
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    margin-left: 10px;
+}
+
+.container .title-theme .theme .theme-numbers-switcher .theme-switcher{
+    appearance: none;
+    --webkit-appearance: none;
+    width: 100%;
+    height: 27px;
+    background-color: var(--toggle-background-keypad-background);
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .title-theme .theme .theme-numbers-switcher .theme-switcher .dot{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    background-color: var(--key-background-toggle);
+    transition: all .2s;
+}
+
+.container .result-container{
+    background-color: var(--screen-background);
+    color: var(--text-primary);
+    font-size: 50px;
+    font-weight: 700;
+    text-align: right;
+    padding: 40px 25px;
+    border-radius: 8px;
+    margin: 25px auto;
+    height: 126.67px;
+}
+
+.container .btn-container{
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--toggle-background-keypad-background);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    gap: 20px;
+}
+
+.container .btn-container > button{
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: var(--key-background);
+    border-bottom: 4px solid var(--key-shadow);
+    color: var(--keys-color);
+    cursor: pointer;
+    user-select: none;
+    transition: all .2s;
+}
+
+.container .btn-container > button:active{
+    transform: scale(.93);
+}
+
+.container .btn-container > button:hover{
+    background-color: var(--keys-hover);
+}
+
+.container .btn-container :is(.del, .reset){
+    background-color: var(--key-background-two);
+    border-bottom: 4px solid var(--key-shadow-two);
+    color: var(--special-keys-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.container .btn-container :is(.del, .reset):hover{
+    background-color: var(--special-keys-color-hover);
+}
+
+.container .btn-container .reset{
+    grid-column: 1 / span 2;
+}
+
+.container .btn-container .equal{
+    background-color: var(--key-background-toggle);
+    border-bottom: 4px solid var(--key-shadow-three);
+    color: var(--special-keys-color);
+    grid-column: 3 / span 2;
+}
+
+.container .btn-container .equal:hover{
+    background-color: var(--key-background-toggle-hover);
+}
+
+@media (max-width:500px){
+    .container {
+        width: calc(100% - 40px);
+    }
+    .container .btn-container {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+    .container .btn-container > button{
+        border-radius: 6px;
+    }
+    .container .result-container {
+        font-size: 45px;
+        padding: 25px;
+        height: 80px;
+    }
+}
+
+@media (max-width:450px){
+    .container .btn-container {
+        grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+        gap: 15px;
+    }
+    .container .btn-container :is(.del, .reset) {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:370px){
+    .container .btn-container {
+        grid-template-columns: calc(100% / 4 - 5px);
+        gap: 10px;
+    }
+}
